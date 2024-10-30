@@ -28,5 +28,11 @@
     "size": "M",
     "color": "maroon",
     "material": "cotton"
+  },
+  {
+    "name": "nightwear",
+    "size": "M",
+    "color": "purple",
+    "material": "silk"
   }
 ]
