@@ -1,1 +1,39 @@
-[]
+
+  {
+    "name": "shorts",
+    "size": "S",
+    "color": "pink",
+    "material": "silk"
+  },
+  {
+    "name": "pants",
+    "size": "M",
+    "color": "purple",
+    "material": "cotton"
+  },
+  {
+    "name": "jeans",
+    "size": "XL",
+    "color": "blue",
+    "material": "denim"
+  },
+  {
+    "name": "jorts",
+    "size": "XS",
+    "color": "pink",
+    "material": "silk"
+  },
+  {
+    "name": "floral shirt",
+    "size": "M",
+    "color": "maroon",
+    "material": "cotton"
+  },
+  {
+    "name": "nightwear",
+    "size": "M",
+    "color": "purple",
+    "material": "silk"
+  }
+
+
