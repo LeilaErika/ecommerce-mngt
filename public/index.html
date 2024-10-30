@@ -215,16 +215,12 @@
 
         /* Background image styling */
         .background {
+            height: 400px; /* Adjust the height as needed */
+            background-image: url("images/logo.png"); /* Update with the correct path */
+            background-size: contain; /* Ensure the whole image fits within the container */
+            background-repeat: no-repeat;
+            background-position: center;
             position: relative;
-            height: 200px; /* Adjust the height as needed */
-            overflow: hidden;
-        }
-        .background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: blur(8px); /* Adjust blur intensity as needed */
-            opacity: 0.3; /* Adjust transparency as needed */
         }
 
         /* Popup styling */
@@ -291,8 +287,9 @@
         .product-list {
             display: flex;
             flex-wrap: wrap;
-            margin: 20px;
-            gap: 20px;
+            gap: 10px;
+            padding: 20px;
+            margin-top: 0px;
         }
         .product-item {
             background-color: #f9f9f9;
@@ -322,9 +319,7 @@
     </div>
 
     <!-- Blurred Background -->
-    <div class="background">
-        <img src="images/logo.png" alt="Trendify Logo">
-    </div>
+    <div class="background"></div>
 
     <!-- Popup Form -->
     <div id="popupForm">
