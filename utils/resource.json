@@ -130,5 +130,17 @@
     "size": "M",
     "color": "beige",
     "material": "cotton"
+  },
+  {
+    "name": "socksssssssssss",
+    "size": "XS",
+    "color": "white",
+    "material": "cotton"
+  },
+  {
+    "name": "sockssss",
+    "size": "S",
+    "color": "blue",
+    "material": "cotton"
   }
 ]
