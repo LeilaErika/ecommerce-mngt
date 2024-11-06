@@ -210,6 +210,23 @@
             position: relative;
         }
 
+        #searchInput {
+            width: 40%;
+            position: relative;
+            bottom: 10px;
+            left: 370px;
+            box-sizing: border-box;
+            border: 1px solid #7d7d7d;
+            border-radius: 48px;
+            font-size: 16px;
+            background-color: rgb(240, 240, 240);
+            background-image: url('images/search_icon.png');
+            background-position: 15px center;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 45px;
+        }
+
         /* Popup styling */
         #popupForm {
             display: none;
@@ -414,6 +431,13 @@
         </div>
     </div>
 
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search item by name..."
+                onkeyup="searchResources()">
+        </div>
+    </div>
+
     <!-- Product List Display -->
     <div class="product-list" id="productList">
         <!-- Product items will be displayed here -->
@@ -458,6 +482,7 @@
                 if (data.message === 'Clothing item added successfully!') {
                     displayProduct(newItem);
                     clearForm();
+                    searchResources();
                     closePopup();
                     openConfirmationPopup();
                 } else {
@@ -501,6 +526,15 @@
                 data.forEach(item => displayProduct(item));
             })
             .catch(err => console.error('Error:', err));
+        }
+
+        function searchResources() {
+            const filter = document.getElementById("searchInput").value.toUpperCase();
+            const items = document.querySelectorAll(".product-item");
+            items.forEach(item => {
+                const name = item.querySelector("h3").textContent;
+                item.style.display = name.toUpperCase().includes(filter) ? "" : "none";
+            });
         }
 
         // Call loadClothingItems on page load
