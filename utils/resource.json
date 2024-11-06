@@ -1,9 +1,15 @@
-
+[
+  {
+    "name": "nightwear",
+    "size": "M",
+    "color": "purple",
+    "material": "silk"
+  },
   {
     "name": "shorts",
     "size": "S",
     "color": "pink",
-    "material": "silk"
+    "material": "update"
   },
   {
     "name": "pants",
@@ -24,16 +30,105 @@
     "material": "silk"
   },
   {
-    "name": "floral shirt",
+    "name": "dress",
     "size": "M",
-    "color": "maroon",
+    "color": "black",
+    "material": "silk"
+  },
+  {
+    "name": "pants",
+    "size": "S",
+    "color": "yellow",
+    "material": "silk"
+  },
+  {
+    "name": "costume",
+    "size": "M",
+    "color": "purple",
+    "material": "denim"
+  },
+  {
+    "name": "shorts",
+    "size": "S",
+    "color": "blue",
     "material": "cotton"
   },
   {
-    "name": "nightwear",
+    "name": "socks",
+    "size": "L",
+    "color": "black",
+    "material": "cotton"
+  },
+  {
+    "name": "shoes clothes",
     "size": "M",
-    "color": "purple",
+    "color": "blue",
+    "material": "cotton"
+  },
+  {
+    "name": "shorts banana",
+    "size": "S",
+    "color": "blue",
     "material": "silk"
+  },
+  {
+    "name": "socks p",
+    "size": "M",
+    "color": "pink",
+    "material": "cotton"
+  },
+  {
+    "name": "shortsss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortsss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortsss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortsss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortssssss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortssssssssss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortssssssssss",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "shortssssssssss updated",
+    "size": "XS",
+    "color": "yellow",
+    "material": "cotton"
+  },
+  {
+    "name": "cargo pants",
+    "size": "M",
+    "color": "beige",
+    "material": "cotton"
   }
-
-
+]
