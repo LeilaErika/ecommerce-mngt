@@ -142,5 +142,12 @@
     "size": "S",
     "color": "blue",
     "material": "cotton"
+  },
+  {
+    "id": "1731164673566",
+    "name": "gym wear",
+    "size": "M",
+    "color": "pink",
+    "material": "polyester silk"
   }
 ]
