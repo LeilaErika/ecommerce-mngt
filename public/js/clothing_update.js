@@ -1,5 +1,4 @@
-// public/js/clothing_add.js
-function updateClothing(id) {
+function updateClothing(itemId) {
   // Retrieve input values from form fields
   const clothingData = {
     name: document.getElementById("name").value,
@@ -15,45 +14,47 @@ function updateClothing(id) {
     !clothingData.color ||
     !clothingData.material
   ) {
-    document.getElementById("message").innerHTML = "All fields are required!";
-    document.getElementById("message").setAttribute("class", "text-danger");
+    alert("All fields are required!");
     return;
   }
 
-  // Prepare and send the PUT request
-  const request = new XMLHttpRequest();
-  request.open("PUT", `/api/update-clothing/${id}`, true);
-  request.setRequestHeader("Content-Type", "application/json");
+  // Send the PUT request with the item ID
+  fetch(`/api/update-clothing/${itemId}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(clothingData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.message === "Clothing item updated successfully!") {
+        // Show success pop-up
+        showSuccessPopup();
 
-  // Handle the response from the server
-  request.onload = function () {
-    const response = JSON.parse(request.responseText);
+        // Clear form fields after successful update
+        document.getElementById("name").value = "";
+        document.getElementById("size").value = "XS";
+        document.getElementById("color").value = "";
+        document.getElementById("material").value = "";
 
-    // Check for success message
-    if (response.message === "Clothing item updated successfully!") {
-      document.getElementById("message").innerHTML =
-        "Updated Clothing: " + clothingData.name + "!";
-      document.getElementById("message").setAttribute("class", "text-success");
+        // Optionally close the form
+        closePopup();
+      } else {
+        alert(data.message || "Error updating clothing item.");
+      }
+    })
+    .catch((err) => {
+      console.error("Error:", err);
+      alert("Network error. Please try again later.");
+    });
+}
 
-      // Clear form fields
-      document.getElementById("name").value = "";
-      document.getElementById("size").value = "";
-      document.getElementById("color").value = "";
-      document.getElementById("material").value = "";
-    } else {
-      document.getElementById("message").innerHTML =
-        response.message || "Unable to update clothing item!";
-      document.getElementById("message").setAttribute("class", "text-danger");
-    }
-  };
+function showSuccessPopup() {
+  document.getElementById("successPopup").style.display = "block";
+  setTimeout(() => {
+    closeSuccessPopup();
+  }, 3000); // Auto-close after 3 seconds
+}
 
-  // Handle request errors
-  request.onerror = function () {
-    document.getElementById("message").innerHTML =
-      "Network error, please try again.";
-    document.getElementById("message").setAttribute("class", "text-danger");
-  };
-
-  // Send the JSON data to the server
-  request.send(JSON.stringify(clothingData));
+function closeSuccessPopup() {
+  document.getElementById("successPopup").style.display = "none";
 }
