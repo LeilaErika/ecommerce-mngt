@@ -1,10 +1,10 @@
 [
   {
     "id": "1731164673566",
-    "name": "gymming wear",
-    "size": "L",
-    "color": "blue",
-    "material": "cotton polyester"
+    "name": "gym wear",
+    "size": "XS",
+    "color": "purple",
+    "material": "spandex"
   },
   {
     "id": "1731166326774",
@@ -159,5 +159,26 @@
     "size": "XS",
     "color": "pink",
     "material": "cotton silk blend"
+  },
+  {
+    "id": "1731257168366",
+    "name": "camisole top",
+    "size": "S",
+    "color": "peach pink",
+    "material": "silk cotton"
+  },
+  {
+    "id": "1731258168818",
+    "name": "top hat",
+    "size": "XS",
+    "color": "black and white",
+    "material": "polyester cotton blend"
+  },
+  {
+    "id": "1731258334205",
+    "name": "baseball cap",
+    "size": "XL",
+    "color": "blue green",
+    "material": "denim"
   }
 ]

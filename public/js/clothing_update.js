@@ -14,7 +14,7 @@ function updateClothing(itemId) {
     !clothingData.color ||
     !clothingData.material
   ) {
-    alert("All fields are required!");
+    // alert("All fields are required!");
     return;
   }
 
