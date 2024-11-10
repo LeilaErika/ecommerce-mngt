@@ -91,7 +91,9 @@
       <div class="confirmation-container">
         <div class="confirmation-icon"></div>
         <p>Action completed successfully!</p>
-        <button onclick="closePopup('confirmationPopupAdd')">OK</button>
+        <button onclick="closeConfirmationPopups('confirmationPopupAdd')">
+          OK
+        </button>
       </div>
     </div>
 
@@ -100,7 +102,9 @@
       <div class="confirmation-container">
         <div class="confirmation-icon"></div>
         <p>Item updated successfully!</p>
-        <button onclick="closePopup('confirmationPopupEdit')">OK</button>
+        <button onclick="closeConfirmationPopups('confirmationPopupEdit')">
+          OK
+        </button>
       </div>
     </div>
 
@@ -137,7 +141,7 @@
         message = "Your item has been added/updated successfully.",
         type = "add"
       ) {
-        closeAllPopups(); // Close all other popups first
+        closeConfirmationPopups(); // Close all other popups first
         const confirmationPopup = document.getElementById(
           type === "add" ? "confirmationPopupAdd" : "confirmationPopupEdit"
         );
@@ -148,8 +152,28 @@
       function closeAllPopups() {
         document.getElementById("editPopupForm").style.display = "none";
         document.getElementById("popupForm").style.display = "none";
-        document.getElementById("confirmationPopupAdd").style.display = "none";
-        document.getElementById("confirmationPopupEdit").style.display = "none";
+      }
+
+      function closeConfirmationPopups() {
+        // Close all popups by removing the 'show' class
+        document
+          .getElementById("confirmationPopupAdd")
+          .classList.remove("show");
+        document
+          .getElementById("confirmationPopupEdit")
+          .classList.remove("show");
+        // Add more popups here as needed (e.g., other forms, modals, etc.)
+      }
+
+      function closeConfirmationPopup(popupId) {
+        // Close the individual popup by its ID
+        const popup = document.getElementById(popupId);
+        if (popup) {
+          popup.classList.remove("show"); // Hide the popup
+        }
+
+        // Reload the page to show the changes made
+        location.reload(); // This reloads the page, reflecting any updates
       }
 
       function openEditForm(itemId) {
