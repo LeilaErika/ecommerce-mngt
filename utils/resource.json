@@ -8,10 +8,10 @@
   },
   {
     "id": "1731166326774",
-    "name": "Hat",
+    "name": "cap",
     "size": "XS",
-    "color": "purple",
-    "material": "Cotton"
+    "color": "pink",
+    "material": "cotton polyester"
   },
   {
     "id": "1731169140692",
@@ -180,5 +180,19 @@
     "size": "XL",
     "color": "blue green",
     "material": "denim"
+  },
+  {
+    "id": "1731307495894",
+    "name": "Dance Wear",
+    "size": "XS",
+    "color": "pale pink",
+    "material": "wool cotton blend"
+  },
+  {
+    "id": "1731314574623",
+    "name": "captain hook costume",
+    "size": "XS",
+    "color": "brown",
+    "material": "wool cotton blend"
   }
 ]
