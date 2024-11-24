@@ -125,6 +125,7 @@
 
     <script src="js/clothing_add.js"></script>
     <script src="js/clothing_update.js"></script>
+    <script src="js/clothing_search.js"></script>
     <script>
       // Popup Handling Functions
       function openAddPopup() {
@@ -328,19 +329,6 @@
             data.forEach((item) => displayProduct(item));
           })
           .catch((error) => console.error("Error:", error));
-      }
-
-      function searchResources() {
-        const filter = document
-          .getElementById("searchInput")
-          .value.toUpperCase();
-        const items = document.querySelectorAll(".product-item");
-        items.forEach((item) => {
-          const name = item.querySelector("h3").textContent;
-          item.style.display = name.toUpperCase().includes(filter)
-            ? ""
-            : "none";
-        });
       }
 
       function displayError(message) {
