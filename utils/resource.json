@@ -215,5 +215,12 @@
     "size": "XS",
     "color": "purple",
     "material": "spandex"
+  },
+  {
+    "id": "1733143436873",
+    "name": "Dance Wear",
+    "size": "XS",
+    "color": "pale pink",
+    "material": "silk"
   }
 ]
