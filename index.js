@@ -1,10 +1,12 @@
 // index.js
 const express = require("express");
 const bodyParser = require("body-parser");
-const clothingRoutes = require("./routes/clothingRoutes"); // Import the route file
+const clothingRoutes1 = require("./routes/clothingRoutes_jums"); // Import the route file
+const clothingRoutes2 = require("./routes/clothingRoutes_leila"); // Import the route file
+const clothingRoutes3 = require("./routes/clothingRoutesCR"); // Import the route file
 
 const app = express();
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 5051;
 const startPage = "index.html";
 
 // Middleware
@@ -18,7 +20,9 @@ app.get("/", (req, res) => {
 });
 
 // Use the clothing routes with the /api prefix
-app.use("/api", clothingRoutes); // Register the routes under /api
+app.use("/api", clothingRoutes1); // Register the routes under /api
+app.use("/api", clothingRoutes2); // Register the routes under /api
+app.use("/api", clothingRoutes3); // Register the routes under /api
 
 // Start the server
 const server = app.listen(PORT, function () {
