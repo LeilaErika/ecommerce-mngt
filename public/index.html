@@ -1,117 +1,101 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trendify</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- Navigation bar -->
-    <div class="navbar">
-      <div class="nav-left">
-        <button onclick="openAddPopup()">Add Clothing</button>
-      </div>
-      <div class="brand">Trendify</div>
+<head>
+    <title>Code coverage report for All files</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1>All files</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
     </div>
-
-    <!-- Blurred Background -->
-    <div class="background"></div>
-
-    <!-- Popup Form -->
-    <div id="popupForm">
-      <div class="form-container">
-        <h2 id="popupTitle">Add Clothing</h2>
-        <form onsubmit="event.preventDefault();">
-          <label for="name">Name of Clothing:</label>
-          <input type="text" id="name" required />
-
-          <label for="size">Size:</label>
-          <select id="size" required>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-
-          <label for="color">Color:</label>
-          <input type="text" id="color" required />
-
-          <label for="material">Material:</label>
-          <input type="text" id="material" required />
-
-          <button id="saveAddButton" onclick="addClothing()">
-            Add Clothing
-          </button>
-          <button type="button" onclick="closeAllPopups()">Cancel</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Edit Popup Form -->
-    <div id="editPopupForm">
-      <div class="form-container">
-        <h2 id="popupTitle">Edit Clothing</h2>
-        <form onsubmit="event.preventDefault();">
-          <input type="hidden" id="editId" />
-          <!-- Hidden field to store the item ID -->
-          <label for="name">Name of Clothing:</label>
-          <input type="text" id="editName" required />
-
-          <label for="size">Size:</label>
-          <select id="editSize" required>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-
-          <label for="color">Color:</label>
-          <input type="text" id="editColor" required />
-
-          <label for="material">Material:</label>
-          <input type="text" id="editMaterial" required />
-
-          <button id="saveEditButton" onclick="editClothing()">
-            Save Changes
-          </button>
-          <button type="button" onclick="closeAllPopups()">Cancel</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Confirmation Popup for Adding -->
-    <div id="confirmationPopupAdd" class="confirmation-popup">
-      <div class="confirmation-container">
-        <div class="confirmation-icon"></div>
-        <p>Action completed successfully!</p>
-        <button onclick="closeConfirmationPopups('confirmationPopupAdd')">
-          OK
-        </button>
-      </div>
-    </div>
-
-    <!-- Confirmation Popup for Editing -->
-    <div id="confirmationPopupEdit" class="confirmation-popup">
-      <div class="confirmation-container">
-        <div class="confirmation-icon"></div>
-        <p>Item updated successfully!</p>
-        <button onclick="closeConfirmationPopups('confirmationPopupEdit')">
-          OK
-        </button>
-      </div>
-    </div>
-
-    <!-- Product List Display -->
-    <div class="product-list" id="productList">
-      <!-- Product items will be displayed here -->
-    </div>
-
-    <script src="js/clothing_add.js"></script>
-    <script src="js/clothing_update.js"></script>
-    <script src="js/common.js"></script>
-  </body>
+    <div class='status-line medium'></div>
+    <div class="pad1">
+<table class="coverage-summary">
+<thead>
+<tr>
+   <th data-col="file" data-fmt="html" data-html="true" class="file">File</th>
+   <th data-col="pic" data-type="number" data-fmt="html" data-html="true" class="pic"></th>
+   <th data-col="statements" data-type="number" data-fmt="pct" class="pct">Statements</th>
+   <th data-col="statements_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="branches" data-type="number" data-fmt="pct" class="pct">Branches</th>
+   <th data-col="branches_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="functions" data-type="number" data-fmt="pct" class="pct">Functions</th>
+   <th data-col="functions_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="lines" data-type="number" data-fmt="pct" class="pct">Lines</th>
+   <th data-col="lines_raw" data-type="number" data-fmt="html" class="abs"></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-12-04T20:44:22.272Z
+            </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
 </html>
+    
