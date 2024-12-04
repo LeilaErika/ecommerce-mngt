@@ -1,10 +1,10 @@
 [
   {
     "id": "1731164673566",
-    "name": "gym wear",
-    "size": "S",
-    "color": "pink",
-    "material": "cotton spandex"
+    "name": "gym weare",
+    "size": "XS",
+    "color": "purple",
+    "material": "spandex"
   },
   {
     "id": "1731166326774",
@@ -215,12 +215,5 @@
     "size": "XS",
     "color": "purple",
     "material": "spandex"
-  },
-  {
-    "id": "1733143436873",
-    "name": "Dance Wear",
-    "size": "XS",
-    "color": "pale pink",
-    "material": "silk"
   }
 ]

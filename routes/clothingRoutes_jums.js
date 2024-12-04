@@ -36,12 +36,4 @@ router.post("/add-clothing", (req, res) => {
   });
 });
 
-// Add a clothing item
-router.post("/add-clothing", (req, res) => {
-  const item = req.body;
-  item.id = Date.now().toString();
-  clothingItems.push(item);
-  res.status(200).json({ message: "Clothing item added successfully!" });
-});
-
 module.exports = router;
