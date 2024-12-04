@@ -1,7 +1,7 @@
 [
   {
     "id": "1731164673566",
-    "name": "gym wear",
+    "name": "gym weare",
     "size": "XS",
     "color": "purple",
     "material": "spandex"
@@ -11,7 +11,7 @@
     "name": "Hat",
     "size": "XS",
     "color": "purple",
-    "material": "Cotton"
+    "material": "Cottons"
   },
   {
     "id": "1731169140692",
@@ -194,5 +194,26 @@
     "size": "XS",
     "color": "white",
     "material": "cotton"
+  },
+  {
+    "id": "1732623831976",
+    "name": "test",
+    "size": "XS",
+    "color": "red",
+    "material": "red"
+  },
+  {
+    "id": "1732627552537",
+    "name": "test",
+    "size": "XS",
+    "color": "red",
+    "material": "red"
+  },
+  {
+    "id": "1732768259441",
+    "name": "Dance Wear",
+    "size": "XS",
+    "color": "purple",
+    "material": "spandex"
   }
 ]

@@ -1,51 +1,73 @@
-function updateClothing(itemId) {
-  // Retrieve input values from form fields
-  const clothingData = {
-    name: document.getElementById("name").value,
-    size: document.getElementById("size").value,
-    color: document.getElementById("color").value,
-    material: document.getElementById("material").value,
-  };
-
-  // Basic validation for required fields
-  if (
-    !clothingData.name ||
-    !clothingData.size ||
-    !clothingData.color ||
-    !clothingData.material
-  ) {
-    // alert("All fields are required!");
-    return;
-  }
-
-  // Send the PUT request with the item ID
-  fetch(`/api/update-clothing/${itemId}`, {
+function updateClothing(updatedItem) {
+  fetch(`/api/update-clothing/${updatedItem.id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(clothingData),
+    body: JSON.stringify(updatedItem),
   })
     .then((response) => response.json())
     .then((data) => {
       if (data.message === "Clothing item updated successfully!") {
-        // Show success pop-up
-        showSuccessPopup();
-
-        // Clear form fields after successful update
-        document.getElementById("name").value = "";
-        document.getElementById("size").value = "XS";
-        document.getElementById("color").value = "";
-        document.getElementById("material").value = "";
-
-        // Optionally close the form
-        closePopup();
+        // Reload the list of clothing items
+        loadClothingItems();
+        // Close the form
+        closeAllPopups();
+        // Show confirmation message
+        openConfirmationPopup(
+          "Your clothing item has been updated successfully.",
+          "edit"
+        );
       } else {
-        alert(data.message || "Error updating clothing item.");
+        // Handle error if update fails
+        displayError(data.message || "Error updating clothing item.");
       }
     })
-    .catch((err) => {
-      console.error("Error:", err);
-      alert("Network error. Please try again later.");
-    });
+    .catch(() => displayError("Network error. Please try again later."));
+}
+
+function editClothing() {
+  const updatedItem = {
+    id: document.getElementById("editId").value, // Get the ID from the hidden field
+    name: document.getElementById("editName").value,
+    size: document.getElementById("editSize").value,
+    color: document.getElementById("editColor").value,
+    material: document.getElementById("editMaterial").value,
+  };
+
+  // Call the function to update the clothing item
+  updateClothing(updatedItem);
+}
+
+function openEditForm(itemId) {
+  closeAllPopups(); // This will hide the add popup if it's open
+  const nameInput = document.getElementById("editName");
+  const sizeInput = document.getElementById("editSize");
+  const colorInput = document.getElementById("editColor");
+  const materialInput = document.getElementById("editMaterial");
+  const editIdInput = document.getElementById("editId");
+  const saveButton = document.getElementById("saveEditButton");
+
+  if (
+    nameInput &&
+    sizeInput &&
+    colorInput &&
+    materialInput &&
+    saveButton &&
+    editIdInput
+  ) {
+    fetch(`/api/get-clothing/${itemId}`)
+      .then((response) => response.json())
+      .then((item) => {
+        nameInput.value = item.name;
+        sizeInput.value = item.size;
+        colorInput.value = item.color;
+        materialInput.value = item.material;
+        editIdInput.value = item.id;
+        document.getElementById("editPopupForm").style.display = "flex"; // Show the edit popup
+      })
+      .catch((error) => console.error("Error fetching item:", error));
+  } else {
+    console.error("One or more form elements are missing in the DOM.");
+  }
 }
 
 function showSuccessPopup() {

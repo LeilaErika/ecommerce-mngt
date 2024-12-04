@@ -1,350 +1,101 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trendify</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- Navigation bar -->
-    <div class="navbar">
-      <div class="nav-left">
-        <button onclick="openAddPopup()">Add Clothing</button>
-      </div>
-      <div class="brand">Trendify</div>
-    </div>
-
-    <!-- Blurred Background -->
-    <div class="background"></div>
-
-
-    <!-- Popup Form -->
-    <div id="popupForm">
-      <div class="form-container">
-        <h2 id="popupTitle">Add Clothing</h2>
-        <form onsubmit="event.preventDefault();">
-          <label for="name">Name of Clothing:</label>
-          <input type="text" id="name" required />
-
-          <label for="size">Size:</label>
-          <select id="size" required>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-
-          <label for="color">Color:</label>
-          <input type="text" id="color" required />
-
-          <label for="material">Material:</label>
-          <input type="text" id="material" required />
-
-          <button id="saveAddButton" onclick="addClothing()">
-            Add Clothing
-          </button>
-          <button type="button" onclick="closeAllPopups()">Cancel</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Edit Popup Form -->
-    <div id="editPopupForm">
-      <div class="form-container">
-        <h2 id="popupTitle">Edit Clothing</h2>
-        <form onsubmit="event.preventDefault();">
-          <input type="hidden" id="editId" />
-          <!-- Hidden field to store the item ID -->
-          <label for="name">Name of Clothing:</label>
-          <input type="text" id="editName" required />
-
-          <label for="size">Size:</label>
-          <select id="editSize" required>
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-
-          <label for="color">Color:</label>
-          <input type="text" id="editColor" required />
-
-          <label for="material">Material:</label>
-          <input type="text" id="editMaterial" required />
-
-          <button id="saveEditButton" onclick="editClothing()">
-            Save Changes
-          </button>
-          <button type="button" onclick="closeAllPopups()">Cancel</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Confirmation Popup for Adding -->
-    <div id="confirmationPopupAdd" class="confirmation-popup">
-      <div class="confirmation-container">
-        <div class="confirmation-icon"></div>
-        <p>Action completed successfully!</p>
-        <button onclick="closeConfirmationPopups('confirmationPopupAdd')">
-          OK
-        </button>
-      </div>
-    </div>
-
-    <!-- Confirmation Popup for Editing -->
-    <div id="confirmationPopupEdit" class="confirmation-popup">
-      <div class="confirmation-container">
-        <div class="confirmation-icon"></div>
-        <p>Item updated successfully!</p>
-        <button onclick="closeConfirmationPopups('confirmationPopupEdit')">
-          OK
-        </button>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <input
-          type="text"
-          id="searchInput"
-          class="form-control"
-          placeholder="Search item by name..."
-          onkeyup="searchResources()"
-        />
-      </div>
-    </div>
-
-    <!-- Product List Display -->
-    <div class="product-list" id="productList">
-      <!-- Product items will be displayed here -->
-    </div>
-
-    <script src="js/clothing_add.js"></script>
-    <script src="js/clothing_update.js"></script>
-    <script src="js/clothing_search.js"></script>
-    <script>
-      // Popup Handling Functions
-      function openAddPopup() {
-        closeAllPopups(); // This will ensure both forms are hidden before showing add popup.
-        document.getElementById("popupTitle").innerText = "Add Clothing";
-        document.getElementById("saveAddButton").onclick = addClothing;
-        document.getElementById("popupForm").style.display = "flex";
-        clearForm(); // Clear the form fields before opening
-      }
-
-      function openConfirmationPopup(
-        message = "Your item has been added/updated successfully.",
-        type = "add"
-      ) {
-        closeConfirmationPopups(); // Close all other popups first
-        const confirmationPopup = document.getElementById(
-          type === "add" ? "confirmationPopupAdd" : "confirmationPopupEdit"
-        );
-        confirmationPopup.querySelector("p").innerText = message; // Set the message in the popup
-        confirmationPopup.classList.add("show"); // Show the selected popup
-      }
-
-      function closeAllPopups() {
-        document.getElementById("editPopupForm").style.display = "none";
-        document.getElementById("popupForm").style.display = "none";
-      }
-
-      function closeConfirmationPopups() {
-        // Close all popups by removing the 'show' class
-        document
-          .getElementById("confirmationPopupAdd")
-          .classList.remove("show");
-        document
-          .getElementById("confirmationPopupEdit")
-          .classList.remove("show");
-      }
-
-      function closeConfirmationPopup(popupId) {
-        // Close the individual popup by its ID
-        const popup = document.getElementById(popupId);
-        if (popup) {
-          popup.classList.remove("show"); // Hide the popup
+<head>
+    <title>Code coverage report for All files</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
         }
-
-        // Reload the page to show the changes made
-        location.reload(); // This reloads the page, reflecting any updates
-      }
-
-      function openEditForm(itemId) {
-        closeAllPopups(); // This will hide the add popup if it's open
-        const nameInput = document.getElementById("editName");
-        const sizeInput = document.getElementById("editSize");
-        const colorInput = document.getElementById("editColor");
-        const materialInput = document.getElementById("editMaterial");
-        const editIdInput = document.getElementById("editId");
-        const saveButton = document.getElementById("saveEditButton");
-
-        if (
-          nameInput &&
-          sizeInput &&
-          colorInput &&
-          materialInput &&
-          saveButton &&
-          editIdInput
-        ) {
-          fetch(`/api/get-clothing/${itemId}`)
-            .then((response) => response.json())
-            .then((item) => {
-              nameInput.value = item.name;
-              sizeInput.value = item.size;
-              colorInput.value = item.color;
-              materialInput.value = item.material;
-              editIdInput.value = item.id;
-              document.getElementById("editPopupForm").style.display = "flex"; // Show the edit popup
-            })
-            .catch((error) => console.error("Error fetching item:", error));
-        } else {
-          console.error("One or more form elements are missing in the DOM.");
-        }
-      }
-
-      // Data Operation Functions
-      function addClothing() {
-        const newItem = {
-          name: document.getElementById("name").value,
-          size: document.getElementById("size").value,
-          color: document.getElementById("color").value,
-          material: document.getElementById("material").value,
-        };
-
-        fetch("/api/add-clothing", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newItem),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.message === "Clothing item added successfully!") {
-              loadClothingItems();
-              closeAllPopups();
-              openConfirmationPopup(
-                "Your clothing item has been added successfully.",
-                "add"
-              );
-            } else {
-              displayError(data.message || "Error adding clothing item.");
-            }
-          })
-          .catch(() => displayError("Network error. Please try again later."));
-      }
-
-      function updateClothing(updatedItem) {
-        fetch(`/api/update-clothing/${updatedItem.id}`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(updatedItem),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.message === "Clothing item updated successfully!") {
-              // Reload the list of clothing items
-              loadClothingItems();
-              // Close the form
-              closeAllPopups();
-              // Show confirmation message
-              openConfirmationPopup(
-                "Your clothing item has been updated successfully.",
-                "edit"
-              );
-            } else {
-              // Handle error if update fails
-              displayError(data.message || "Error updating clothing item.");
-            }
-          })
-          .catch(() => displayError("Network error. Please try again later."));
-      }
-
-      function editClothing() {
-        const updatedItem = {
-          id: document.getElementById("editId").value, // Get the ID from the hidden field
-          name: document.getElementById("editName").value,
-          size: document.getElementById("editSize").value,
-          color: document.getElementById("editColor").value,
-          material: document.getElementById("editMaterial").value,
-        };
-
-        // Call the function to update the clothing item
-        updateClothing(updatedItem);
-      }
-
-      function fetchClothingData() {
-        fetch("/api/get-clothing")
-          .then((response) => response.json())
-          .then((fetchedData) => {
-            console.log("Fetched Clothing Data:", fetchedData);
-            data = fetchedData;
-          })
-          .catch((error) => console.error("Error fetching data:", error));
-      }
-
-      function updateItemInData(updatedItem) {
-        if (Array.isArray(data)) {
-          const index = data.findIndex((item) => item.id === updatedItem.id);
-          if (index !== -1) {
-            data[index] = updatedItem;
-          } else {
-            console.error("Item not found in the data array.");
-          }
-        } else {
-          console.error("Data is not an array or is undefined.");
-        }
-      }
-
-      function getItemById(id) {
-        return fetch(`/api/get-clothing/${id}`)
-          .then((response) => response.json())
-          .catch((error) => console.error("Error fetching item by ID:", error));
-      }
-
-      // UI Update Functions
-      function displayProduct(item) {
-        const productItem = document.createElement("div");
-        productItem.classList.add("product-item");
-        productItem.innerHTML = `
-        <h3>${item.name}</h3>
-        <p><strong>Size:</strong> ${item.size}</p>
-        <p><strong>Color:</strong> ${item.color}</p>
-        <p><strong>Material:</strong> ${item.material}</p>
-        <button class="edit-button" data-id="${item.id}">Edit</button>
-    `;
-        const editButton = productItem.querySelector(".edit-button");
-        editButton.addEventListener("click", () => openEditForm(item.id));
-        document.getElementById("productList").appendChild(productItem);
-      }
-
-      function loadClothingItems() {
-        fetch("/api/get-clothing")
-          .then((response) => response.json())
-          .then((data) => {
-            document.getElementById("productList").innerHTML = "";
-            data.forEach((item) => displayProduct(item));
-          })
-          .catch((error) => console.error("Error:", error));
-      }
-
-      function displayError(message) {
-        document.getElementById("message").innerHTML = message;
-        document.getElementById("message").setAttribute("class", "text-danger");
-      }
-
-      function clearForm() {
-        document.getElementById("name").value = "";
-        document.getElementById("size").value = "XS";
-        document.getElementById("color").value = "";
-        document.getElementById("material").value = "";
-      }
-
-      // Initialization
-      window.onload = loadClothingItems;
-    </script>
-  </body>
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1>All files</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">Unknown% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line medium'></div>
+    <div class="pad1">
+<table class="coverage-summary">
+<thead>
+<tr>
+   <th data-col="file" data-fmt="html" data-html="true" class="file">File</th>
+   <th data-col="pic" data-type="number" data-fmt="html" data-html="true" class="pic"></th>
+   <th data-col="statements" data-type="number" data-fmt="pct" class="pct">Statements</th>
+   <th data-col="statements_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="branches" data-type="number" data-fmt="pct" class="pct">Branches</th>
+   <th data-col="branches_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="functions" data-type="number" data-fmt="pct" class="pct">Functions</th>
+   <th data-col="functions_raw" data-type="number" data-fmt="html" class="abs"></th>
+   <th data-col="lines" data-type="number" data-fmt="pct" class="pct">Lines</th>
+   <th data-col="lines_raw" data-type="number" data-fmt="html" class="abs"></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2024-12-04T20:44:22.272Z
+            </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
 </html>
+    

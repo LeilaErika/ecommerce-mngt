@@ -8,6 +8,7 @@ const dataPath = path.join(__dirname, "../utils/resource.json");
 
 // Update route to modify an existing clothing item
 router.put("/update-clothing/:id", (req, res) => {
+  console.log("Received PUT request for ID:", req.params.id);
   const { id } = req.params; // Retrieve ID from route parameters
   const { name, size, color, material } = req.body;
 
@@ -49,20 +50,6 @@ router.put("/update-clothing/:id", (req, res) => {
       res.status(200).json({ message: "Clothing item updated successfully!" });
     });
   });
-});
-
-// Update a clothing item
-router.put("/update-clothing/:id", (req, res) => {
-  const { id } = req.params;
-  const updatedItem = req.body;
- 
-  const index = clothingItems.findIndex((item) => item.id === id);
-  if (index !== -1) {
-    clothingItems[index] = { ...clothingItems[index], ...updatedItem };
-    res.status(200).json({ message: "Clothing item updated successfully!" });
-  } else {
-    res.status(404).json({ message: "Clothing item not found!" });
-  }
 });
 
 module.exports = router;
