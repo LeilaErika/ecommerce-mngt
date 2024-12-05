@@ -4,7 +4,7 @@
         "html"
     ],
     "include": [
-        "utils/*.js"
+        "routes/clothingRoutes_leila.js"
     ],
     "reportDir": "coverage/backend",
     "branches": 80,

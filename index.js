@@ -7,7 +7,7 @@ const clothingRoutes3 = require("./routes/clothingRoutesCR1"); // Import the rou
 const clothingRoutes4 = require("./routes/clothingRoutesCR2"); // Import the route file
 
 const app = express();
-const PORT = process.env.PORT || 5051;
+const PORT = process.env.PORT || 5050;
 const startPage = "index.html";
 
 // Middleware
