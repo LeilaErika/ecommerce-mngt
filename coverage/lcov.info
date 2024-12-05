@@ -75,10 +75,8 @@ FN:40,openEditForm
 FN:58,(anonymous_6)
 FN:59,(anonymous_7)
 FN:67,(anonymous_8)
-FN:73,showSuccessPopup
-FN:75,(anonymous_10)
 FN:80,closeSuccessPopup
-FNF:12
+FNF:10
 FNH:8
 FNDA:2,updateClothing
 FNDA:2,(anonymous_1)
@@ -89,8 +87,6 @@ FNDA:2,openEditForm
 FNDA:2,(anonymous_6)
 FNDA:2,(anonymous_7)
 FNDA:0,(anonymous_8)
-FNDA:0,showSuccessPopup
-FNDA:0,(anonymous_10)
 FNDA:0,closeSuccessPopup
 DA:2,2
 DA:7,2
@@ -120,11 +116,8 @@ DA:64,2
 DA:65,2
 DA:67,0
 DA:69,0
-DA:74,0
-DA:75,0
-DA:76,0
 DA:81,0
-LF:32
+LF:29
 LH:26
 BRDA:9,0,0,1
 BRDA:9,0,1,1
