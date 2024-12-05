@@ -1,5 +1,5 @@
 function updateClothing(updatedItem) {
-  fetch(`/api/update-clothing/${updatedItem.id}`, {
+  fetch(`/update-clothing/${updatedItem.id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updatedItem),
@@ -54,7 +54,7 @@ function openEditForm(itemId) {
     saveButton &&
     editIdInput
   ) {
-    fetch(`/api/get-clothing/${itemId}`)
+    fetch(`/get-clothing/${itemId}`)
       .then((response) => response.json())
       .then((item) => {
         nameInput.value = item.name;

@@ -6,7 +6,7 @@ function addClothing() {
     material: document.getElementById("material").value,
   };
 
-  fetch("/api/add-clothing", {
+  fetch("/add-clothing", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newItem),

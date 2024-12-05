@@ -30,43 +30,8 @@ function closeConfirmationPopups() {
   document.getElementById("confirmationPopupEdit").classList.remove("show");
 }
 
-//   function closeConfirmationPopup(popupId) {
-//     // Close the individual popup by its ID
-//     const popup = document.getElementById(popupId);
-//     if (popup) {
-//       popup.classList.remove("show"); // Hide the popup
-//     }
-
-//     // Reload the page to show the changes made
-//     location.reload(); // This reloads the page, reflecting any updates
-//   }
-
-// Data Operation Functions
-//   function fetchClothingData() {
-//     fetch("/api/get-clothing")
-//       .then((response) => response.json())
-//       .then((fetchedData) => {
-//         console.log("Fetched Clothing Data:", fetchedData);
-//         data = fetchedData;
-//       })
-//       .catch((error) => console.error("Error fetching data:", error));
-//   }
-
-//   function updateItemInData(updatedItem) {
-//     if (Array.isArray(data)) {
-//       const index = data.findIndex((item) => item.id === updatedItem.id);
-//       if (index !== -1) {
-//         data[index] = updatedItem;
-//       } else {
-//         console.error("Item not found in the data array.");
-//       }
-//     } else {
-//       console.error("Data is not an array or is undefined.");
-//     }
-//   }
-
 function getItemById(id) {
-  return fetch(`/api/get-clothing/${id}`)
+  return fetch(`/get-clothing/${id}`)
     .then((response) => response.json())
     .catch((error) => console.error("Error fetching item by ID:", error));
 }
@@ -88,7 +53,7 @@ function displayProduct(item) {
 }
 
 function loadClothingItems() {
-  fetch("/api/get-clothing")
+  fetch("/get-clothing")
     .then((response) => response.json())
     .then((data) => {
       document.getElementById("productList").innerHTML = "";
