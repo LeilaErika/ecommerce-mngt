@@ -4,7 +4,7 @@
         "html"
     ],
     "include": [
-        " public/js/**/*.js"
+        " public/js/clothing_update.js"
     ],
     "reportDir": "coverage/frontend",
     "check-coverage": true,

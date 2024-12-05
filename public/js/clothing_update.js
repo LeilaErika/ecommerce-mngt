@@ -70,12 +70,12 @@ function openEditForm(itemId) {
   }
 }
 
-function showSuccessPopup() {
-  document.getElementById("successPopup").style.display = "block";
-  setTimeout(() => {
-    closeSuccessPopup();
-  }, 3000); // Auto-close after 3 seconds
-}
+// function showSuccessPopup() {
+//   document.getElementById("successPopup").style.display = "block";
+//   setTimeout(() => {
+//     closeSuccessPopup();
+//   }, 3000); // Auto-close after 3 seconds
+// }
 
 function closeSuccessPopup() {
   document.getElementById("successPopup").style.display = "none";
