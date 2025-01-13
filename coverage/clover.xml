@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733386859987" clover="3.2.0">
-  <project timestamp="1733386859987" name="All files">
+<coverage generated="1733389028640" clover="3.2.0">
+  <project timestamp="1733389028641" name="All files">
     <metrics statements="81" coveredstatements="46" conditionals="22" coveredconditionals="11" methods="35" coveredmethods="18" elements="138" coveredelements="75" complexity="0" loc="81" ncloc="81" packages="1" files="4" classes="4"/>
-    <file name="clothing_add.js" path="C:\Users\Leila Erika\OneDrive - Temasek Polytechnic\Desktop\Y2SEM2 notes\DevOps Essentials\Project Part 2\project\ecommerce-mngt\public\js\clothing_add.js">
+    <file name="clothing_add.js" path="C:\Users\Leila Erika\Documents\DVOPS_Ecommerce\ecommerce-mngt\public\js\clothing_add.js">
       <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
       <line num="2" count="0" type="stmt"/>
       <line num="9" count="0" type="stmt"/>
@@ -22,7 +22,7 @@
       <line num="40" count="0" type="stmt"/>
       <line num="45" count="0" type="stmt"/>
     </file>
-    <file name="clothing_search.js" path="C:\Users\Leila Erika\OneDrive - Temasek Polytechnic\Desktop\Y2SEM2 notes\DevOps Essentials\Project Part 2\project\ecommerce-mngt\public\js\clothing_search.js">
+    <file name="clothing_search.js" path="C:\Users\Leila Erika\Documents\DVOPS_Ecommerce\ecommerce-mngt\public\js\clothing_search.js">
       <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <line num="2" count="0" type="stmt"/>
       <line num="5" count="0" type="stmt"/>
@@ -30,7 +30,7 @@
       <line num="7" count="0" type="stmt"/>
       <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
     </file>
-    <file name="clothing_update.js" path="C:\Users\Leila Erika\OneDrive - Temasek Polytechnic\Desktop\Y2SEM2 notes\DevOps Essentials\Project Part 2\project\ecommerce-mngt\public\js\clothing_update.js">
+    <file name="clothing_update.js" path="C:\Users\Leila Erika\Documents\DVOPS_Ecommerce\ecommerce-mngt\public\js\clothing_update.js">
       <metrics statements="29" coveredstatements="26" conditionals="12" coveredconditionals="10" methods="10" coveredmethods="8"/>
       <line num="2" count="2" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
@@ -62,7 +62,7 @@
       <line num="69" count="0" type="stmt"/>
       <line num="81" count="0" type="stmt"/>
     </file>
-    <file name="common.js" path="C:\Users\Leila Erika\OneDrive - Temasek Polytechnic\Desktop\Y2SEM2 notes\DevOps Essentials\Project Part 2\project\ecommerce-mngt\public\js\common.js">
+    <file name="common.js" path="C:\Users\Leila Erika\Documents\DVOPS_Ecommerce\ecommerce-mngt\public\js\common.js">
       <metrics statements="30" coveredstatements="20" conditionals="4" coveredconditionals="1" methods="15" coveredmethods="10"/>
       <line num="3" count="0" type="stmt"/>
       <line num="4" count="0" type="stmt"/>

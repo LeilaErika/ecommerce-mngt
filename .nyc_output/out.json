@@ -1,6 +1,6 @@
 {
-  "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\clothing_add.js": {
-    "path": "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\clothing_add.js",
+  "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\clothing_add.js": {
+    "path": "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\clothing_add.js",
     "statementMap": {
       "0": {
         "start": {
@@ -481,10 +481,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8bbd1916871a2cb5bd97b3ee8f40f798e0fec3d7"
+    "hash": "0b25a6284173f6a15338d1494bdc87850256a56b"
   },
-  "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\clothing_update.js": {
-    "path": "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\clothing_update.js",
+  "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\clothing_update.js": {
+    "path": "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\clothing_update.js",
     "statementMap": {
       "0": {
         "start": {
@@ -1271,10 +1271,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "c0f9a93fe88625ca6c1d1b829825317011bca63d"
+    "hash": "c28d10c95bd2d6a117a44e2876d371ff7dd129ff"
   },
-  "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\clothing_search.js": {
-    "path": "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\clothing_search.js",
+  "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\clothing_search.js": {
+    "path": "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\clothing_search.js",
     "statementMap": {
       "0": {
         "start": {
@@ -1433,10 +1433,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7f332a58438e010ae2fc91ecb68b8e0df2253ff4"
+    "hash": "2b3d0cc47f215c4f597e98403868e651b3752d3b"
   },
-  "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\common.js": {
-    "path": "C:\\Users\\Leila Erika\\OneDrive - Temasek Polytechnic\\Desktop\\Y2SEM2 notes\\DevOps Essentials\\Project Part 2\\project\\ecommerce-mngt\\public\\js\\common.js",
+  "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\common.js": {
+    "path": "C:\\Users\\Leila Erika\\Documents\\DVOPS_Ecommerce\\ecommerce-mngt\\public\\js\\common.js",
     "statementMap": {
       "0": {
         "start": {
@@ -2275,6 +2275,6 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "978d5a91f66cc497d8971cece500316a9eab3de4"
+    "hash": "8c937f583ffb745b4eb5c557dfaa14716465f8e6"
   }
 }
