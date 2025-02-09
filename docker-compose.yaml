@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  build-rms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: leilaerika/rms-docker-img:latest
+    container_name: rms-docker-container
+    ports:
+      - "8000:5050"
+    volumes:
+      - .:/app
+      - /app/node_modules # Prevents node_modules sync issues
+    environment:
+      - NODE_ENV=production
+    command: npm start
