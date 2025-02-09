@@ -11,7 +11,7 @@ services:
       - "8000:5050"
     volumes:
       - .:/app
-      - /app/node_modules # Prevents node_modules sync issues
+      - /app/node_modules  # Prevents node_modules sync issues
     environment:
       - NODE_ENV=production
     command: npm start
