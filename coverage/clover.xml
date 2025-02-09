@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1736793001861" clover="3.2.0">
-  <project timestamp="1736793001861" name="All files">
+<coverage generated="1733389028640" clover="3.2.0">
+  <project timestamp="1733389028641" name="All files">
     <metrics statements="81" coveredstatements="46" conditionals="22" coveredconditionals="11" methods="35" coveredmethods="18" elements="138" coveredelements="75" complexity="0" loc="81" ncloc="81" packages="1" files="4" classes="4"/>
     <file name="clothing_add.js" path="C:\Users\Leila Erika\Documents\DVOPS_Ecommerce\ecommerce-mngt\public\js\clothing_add.js">
       <metrics statements="17" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
