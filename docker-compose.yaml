@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: leilaerika/rms-docker-img:v3
+    image: leilaerika/rms-docker-img:v4
     container_name: rms-docker-container
     ports:
       - "8000:5050"
